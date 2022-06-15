@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>remove trailing zeros from float</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><pre><code>extension  Float {
+
+var clean: String {
+
+return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+
+}
+
+}
+</code></pre>
+<p>Usage:</p>
+<pre><code>   var x = 1.0
+   print(x.clean) //prints 1
+</code></pre>
+</div>
+</body>
+
+</html>

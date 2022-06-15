@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>make a safari search</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p>create function that takes in url and opens it</p>
+<pre><code>func showSafariVC(for url: String){
+
+guard let url = URL(string: url) else {
+
+print("error")
+
+return
+
+}
+
+let safariVC = SFSafariViewController(url: url)
+
+present(safariVC, animated: true)
+
+}
+</code></pre>
+<p>call this function (with google)</p>
+<pre><code>showSafariVC(for: "https://www.google.com")
+</code></pre>
+</div>
+</body>
+
+</html>

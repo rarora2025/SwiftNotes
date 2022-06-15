@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segues &amp; Screen Transitions</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="segues">Segues</h2>
+<p>Create a new UI view controller</p>
+<p>Press control drag one view controller to another</p>
+<p>Press on present modally, go to identity and change the identifier name</p>
+<pre><code>self.performSegue(withIdentifier: “segue identifier name”, sender: self)
+</code></pre>
+<p>If you want to run some code before the segue is initiated use the method</p>
+<pre><code>Override func prepare(for segue: xyz, sender: Any?){
+
+If segue.identifier == “segueIdentifierWanted” {
+
+Let destination = segue.destination as! destination name- *the way to access where the destination is
+
+}
+
+}
+</code></pre>
+<p><strong>TO GO BACK TO ORIGINAL SCREEN:</strong></p>
+<pre><code>self.dismiss(animated: BOOL, completion: nil)
+</code></pre>
+</div>
+</body>
+
+</html>

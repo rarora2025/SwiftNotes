@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(itunes) music in Swift</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="add-music-to-your-app">Add music to your app</h2>
+<ol>
+<li>
+<p>get an mp3 file, and drag it into your project</p>
+</li>
+<li>
+<p>import AVFoundation</p>
+<pre><code> import AVFoundation
+</code></pre>
+</li>
+<li>
+<p>create an audio player</p>
+<pre><code> var  AudioPlayer = AVAudioPlayer()
+</code></pre>
+</li>
+<li>
+<p>insert the following code to make your music run with repeats probably- change music url/filename</p>
+<pre><code> let AssortedMusics = NSURL(fileURLWithPath: 	Bundle.main.path(forResource: "Soft-lounge-background-track", ofType: "mp3")!)
+
+ try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
+
+ try? AVAudioSession.sharedInstance().setActive(true)
+
+ AudioPlayer.volume = 3
+
+ AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+
+ AudioPlayer.prepareToPlay()
+
+ AudioPlayer.numberOfLoops = -1
+
+ AudioPlayer.play()
+</code></pre>
+</li>
+</ol>
+</div>
+</body>
+
+</html>

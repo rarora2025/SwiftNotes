@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool tableview animation</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p>just replace tblView with the name of your table view</p>
+<pre><code>func  animateTable(){
+
+tblView.reloadData()
+
+let cells = tblView.visibleCells
+
+let tblViewHeight = tblView.bounds.size.height
+
+for cell in cells {
+
+cell.transform = CGAffineTransform(translationX: 0, y: tblViewHeight)
+
+}
+
+var delayCounter = 0
+
+for cell in cells {
+
+UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+
+cell.transform = CGAffineTransform.identity
+
+}, completion: nil)
+
+delayCounter += 1
+
+}
+
+}
+</code></pre>
+</div>
+</body>
+
+</html>

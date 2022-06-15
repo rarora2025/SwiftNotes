@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary: How to format, pin, align</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="full-summary--formattingpinningalligning-the-screen">FULL SUMMARY- Formatting/Pinning/Alligning the Screen</h2>
+<p><strong>SAFE AREA/SUPERVIEW: (Pinning/Constraining Single objects)</strong></p>
+<p>Go to constraints (square w/ lines around it)- set constraints to 0 on all sides</p>
+<p>To make it cover the whole screen on landscape, select constraints &gt;&gt; trailing/leading- and make them equal to SUPERVIEW, also make sure the constant is set to 0 .</p>
+<p><strong>ALLIGNING:</strong></p>
+<p>Go to alignment (bar graphs) and click horizontally/vertically in container</p>
+<p><strong>CONTAINERS/SUBVIEWS/STACK VIEWS (embedding views)- FULL STEPS</strong></p>
+<ol>
+<li>
+<p>Drag new view/embed objects in new subview based on location</p>
+</li>
+<li>
+<p>Hold on all views and embed them in a new stack view</p>
+</li>
+<li>
+<p>Give stack view constraints- go to square w/ lines around it and set constraints to 0 on all sides- To make it cover the whole screen on landscape, select constraints &gt;&gt; trailing/leading/bottom/top- and make them equal to SUPERVIEW, also make sure the constant is set to 0 .</p>
+</li>
+<li>
+<p>Go to stack view, attributes, and select distribution to fill equally</p>
+</li>
+<li>
+<p>Now make sure that all objects in the same stack view have their own stack views, and then select those stack views/those solo objects in their own stack view, and make those vertically/horizontally aligned in their container, or pinned</p>
+</li>
+<li>
+<p>Select all containers, change background to default/transparent</p>
+</li>
+<li>
+<p>DONE!!</p>
+</li>
+</ol>
+<p><strong>HOW TO CLEAN UP YOUR BUTTONS IF THEY ARE TIGHTENED UP AFTER PUT IN STACK VIEWS:</strong></p>
+<ol>
+<li>
+<p>Select the button</p>
+</li>
+<li>
+<p>Go to constraints (square w/ lines on side), and change the width to custom sizes chosen; Add those constraints</p>
+</li>
+<li>
+<p>Look at warning (fixed width constraint)- click on error and set the constraint to being greater than custom width so it will automatically adjust</p>
+</li>
+</ol>
+</div>
+</body>
+
+</html>

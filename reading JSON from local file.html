@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reading JSON from local file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p>first drag a .json or other file into your project</p>
+<p>next create path &amp; url-</p>
+<pre><code>guard let path = Bundle.main.path(forResource: "finalDataPapa", ofType: "json") else { return }
+
+let url = URL(fileURLWithPath: path)
+</code></pre>
+<p>finally, decode the data and wrap it in a url<br>
+do {</p>
+<pre><code>let data = try Data(contentsOf: url)
+
+let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+
+guard let array = json as? [Any] else { return }
+
+guard let personDict = array[0] as? [String: Any] else { return }
+
+guard let personfName = personDict["FIRST NAME"] as? String else { print("Persons name in numbers"); return }
+
+
+catch {
+
+print(error)
+
+  
+
+}
+</code></pre>
+<p><a href="https://app.quicktype.io">https://app.quicktype.io</a></p>
+</div>
+</body>
+
+</html>

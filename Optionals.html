@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optionals</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="optionals">Optionals:</h2>
+<p>-handles the absence of a value. Optionals say either “there is a value, and it equals x” or “there isn’t a value at all”.</p>
+<p><strong>Declaration:</strong></p>
+<pre><code>var perhapsInt: Int?
+</code></pre>
+<p><strong>Unwrapping an Optional Value:</strong></p>
+<p>If you define a variable as optional, then to get the value from this variable, you will have to unwrap it.</p>
+<p><strong>Force Unwrapping:</strong></p>
+<p>If you are sure that an optional has a value, you can unwrap it by adding an exclamation to the end of the variable name. For instance–</p>
+<pre><code>if username != nil{  
+Print(username!)  
+}
+</code></pre>
+<p><strong>Optional Binding:</strong></p>
+<p>Use an if-let statement to run some code after assuring that the optional has a value. You can also do this to define how to handle an error, for example–</p>
+<pre><code>var myString:String?  
+myString = "Hello, Swift 4!"  
+  
+if  let yourString = myString {  
+print("Your string has - \(yourString)")  
+} else {  
+print("Your string does not have a value")  
+}
+</code></pre>
+<p>A guard-let statement does the same thing, except it creates a new value for the non-optional value if there is one, unlike this example where yourString cannot be used anywhere else</p>
+</div>
+</body>
+
+</html>
